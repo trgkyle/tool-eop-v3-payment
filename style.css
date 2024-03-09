@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.container-body {
+  display: flex;
+  gap: 50px;
+
+  padding: 20px;
+}
+
+.payment-info {
+  margin-bottom: 10px;
+  background-color: #df0000;
+}
+
+.qr-code {
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.qr-code-img {
+  text-align: center;
+}
+
+.payment-options {
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  padding: 10px;
+}
+
+.logo-icon {
+  display: grid;
+  grid-template-rows: end;
+}
