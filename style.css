@@ -3,22 +3,34 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 0 32px;
   margin: 0 auto;
 }
 
-.container-body {
+.card-body {
   display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
   gap: 50px;
 
-  padding: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+
 }
 
 .payment-info {
-  margin-bottom: 10px;
   background-color: #df0000;
+  border-radius: 5px 0 0 5px;
+
 }
 
 .qr-code {
@@ -28,18 +40,26 @@
 }
 
 .qr-code-img {
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .payment-options {
   margin-bottom: 10px;
 }
 
-.contact-info {
-  padding: 10px;
-}
+
 
 .logo-icon {
   display: grid;
   grid-template-rows: end;
+}
+
+.tp-logo {
+  margin-right: 10px;
+}
+
+aside {
+  width: 500px;
 }
