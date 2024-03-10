@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Payment</title>
@@ -24,29 +30,33 @@
     <div class="container">
       <div class="card-body">
         <aside class="payment-info">
-          <p>Ngân hàng</p>
-          <p class="text-bank">
+          <p class="title">Ngân hàng</p>
+          <div class="bank">
             <img
               class="tp-logo"
               src="Icon-TPBank.webp"
               alt="Ngân hàng TPBank"
               width="24px"
-              height="24"
-            />TP Bank
-          </p>
-          <!-- <hr /> -->
-          <p>Tên tài khoản</p>
-          <p>NGUYEN XUAN TRUONG</p>
-          <!-- <hr /> -->
-          <p>Số tiền</p>
-          <p>20.000 ₫</p>
-          <!-- <hr /> -->
-          <p>Nội dung chuyển khoản</p>
-          <p>NGUYEN XUAN TRUONG chuyển tiền</p>
+              height="24px"
+            />
+            <p class="tp-bank">TP Bank</p>
+          </div>
+          <hr color="#ADB5BD" size="1px" noshade="noshade" align="center" />
+          <p class="title">Tên tài khoản</p>
+          <p class="title-body">NGUYEN XUAN TRUONG</p>
+          <hr color="#ADB5BD" size="1px" noshade="noshade" />
+          <p class="title">Số tiền</p>
+          <p class="title-body">20.000 ₫</p>
+          <hr color="#ADB5BD" size="1px" noshade="noshade" />
+          <p class="title">Nội dung chuyển khoản</p>
+          <p class="title-body">NGUYEN XUAN TRUONG chuyển tiền</p>
         </aside>
         <main class="payment">
-          <img class="logo-icon" src="logo.png" width="80px" height="80px" />
-          <p>Thông báo: Áp dụng phí cho Tool EOP</p>
+          <div class="logo-icon">
+            <img src="logo.png" width="80px" height="80px" />
+          </div>
+          <hr />
+          <p class="notification">Thông báo: Áp dụng phí cho Tool EOP</p>
           <p>
             Chào bạn, Mình xin thông báo rằng bắt đầu từ ngày 22/2/2024, mình sẽ
             áp dụng một khoản phí nhỏ cho việc sử dụng tool EOP. Điều này giúp
@@ -54,19 +64,21 @@
             nghiệm tốt nhất có thể.
           </p>
           <div class="qr-code">
-            Quét QR để thanh toán cho mã tài khoản: 04921
+            <strong>Quét QR để thanh toán cho mã tài khoản:</strong> 04921
           </div>
           <img
             class="qr-code-img"
             src="qrcode.png"
-            width="300px"
-            height="300px"
+            width="250px"
+            height="250px"
           />
           <div class="payment-options">
-            <p>
+            <p class="line-6">
               Nếu bạn gặp bất kỳ vấn đề hoặc câu hỏi nào, Liên hệ qua facebook
-              <ion-icon name="logo-facebook"></ion-icon>
-              <a href="https://www.facebook.com/trgkyle">Nguyen Truong</a>
+              <ion-icon class="logo-facebook" name="logo-facebook"></ion-icon>
+              <a class="facebook-link" href="https://www.facebook.com/trgkyle"
+                >Nguyen Truong</a
+              >
             </p>
             <p>
               Rất trân trọng sự ủng hộ của bạn và mong muốn tiếp tục hỗ trợ bạn
@@ -82,9 +94,9 @@
           Email: hotro@momo.vn
         </div> -->
           <div class="contact-info">
-            <p>Trân trọng,</p>
+            <p class="title-body">Trân trọng,</p>
             <p>Đội ngũ Tool EOP</p>
-            <p>@Copyright BBeeTech 2024</p>
+            <p class="copyright"><em>@Copyright BBeeTech 2024</em></p>
           </div>
         </main>
       </div>

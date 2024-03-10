@@ -4,39 +4,72 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: Arial, sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.5;
 }
+
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   padding: 0 32px;
   margin: 0 auto;
 }
 
+aside {
+  width: 700px;
+}
+
 .card-body {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-
-  gap: 50px;
-
-  padding: 10px;
+  gap: 40px;
+  margin-top: 50px;
   border-radius: 5px;
-  background-color: #f0f0f0;
-
+  /* background-color: #f0f0f0; */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .payment-info {
+  line-height: 2;
   background-color: #df0000;
   border-radius: 5px 0 0 5px;
+  color: #fff;
+  padding: 150px 20px 150px 20px;
+}
 
+.title {
+  font-size: 16px;
+}
+
+.title-body {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bank {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.payment {
+  line-height: 1.7;
+  padding-right: 40px;
 }
 
 .qr-code {
   margin-bottom: 10px;
   padding: 10px;
   text-align: center;
+  color: #df0000;
+  font-size: 18px;
+}
+
+.number-code {
+  color: black;
 }
 
 .qr-code-img {
@@ -46,20 +79,44 @@ html {
 }
 
 .payment-options {
+  padding-top: 10px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-
-
 .logo-icon {
   display: grid;
-  grid-template-rows: end;
+  justify-content: end;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.notification {
+  margin-top: 15px;
 }
 
 .tp-logo {
   margin-right: 10px;
 }
 
-aside {
-  width: 500px;
+.logo-facebook {
+  color: #3b5998;
+  width: 18px;
+  height: 18px;
+}
+
+.facebook-link {
+  color: #3b5998;
+}
+
+.facebook-link:hover,
+.facebook-link:active {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #3b5998;
+}
+
+.copyright {
+  margin-bottom: 10px;
 }
