@@ -49,7 +49,7 @@
           <p class="title-body">20.000 ₫</p>
           <hr color="#ADB5BD" size="1px" noshade="noshade" />
           <p class="title">Nội dung chuyển khoản</p>
-          <p class="title-body">NGUYEN XUAN TRUONG chuyển tiền</p>
+          <p class="title-body">tooleopid<span class="title-description"> </span></p>
         </aside>
         <main class="payment">
           <div class="logo-icon">
@@ -64,13 +64,13 @@
             nghiệm tốt nhất có thể.
           </p>
           <div class="qr-code">
-            <strong>Quét QR để thanh toán cho mã tài khoản:</strong> 04921
+            <strong>Quét QR để thanh toán cho mã tài khoản:</strong> <span class="title-description"></span>
           </div>
           <img
             class="qr-code-img"
-            src="qrcode.png"
-            width="250px"
-            height="250px"
+            src=""
+            width="500px"
+            height="550px"
           />
           <div class="payment-options">
             <p class="line-6">
@@ -101,5 +101,20 @@
         </main>
       </div>
     </div>
+    <script>
+      let params = new URLSearchParams(window.location.search);
+      let tooleopId = params.get('tooleop-id');
+
+      // Get the .title-body element
+      let titleBodyElement = document.getElementsByClassName('title-description');
+
+      // Set the tooleopId as the text of the .title-body element
+      
+      for (let i = 0; i < titleBodyElement.length; i++) {
+        titleBodyElement[i].textContent = tooleopId;
+      }
+      document.querySelector('.qr-code-img').src =
+      `https://img.vietqr.io/image/TPB-04288286101-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`
+    </script>
   </body>
 </html>
