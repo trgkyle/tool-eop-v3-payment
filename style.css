@@ -120,3 +120,18 @@ aside {
 .copyright {
   margin-bottom: 10px;
 }
+
+/* For mobile devices */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  .card-body {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .payment-info {
+    display: none;
+  }
+}

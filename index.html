@@ -49,7 +49,9 @@
           <p class="title-body">20.000 ₫</p>
           <hr color="#ADB5BD" size="1px" noshade="noshade" />
           <p class="title">Nội dung chuyển khoản</p>
-          <p class="title-body">tooleopid<span class="title-description"> </span></p>
+          <p class="title-body">
+            tooleopid<span class="title-description"> </span>
+          </p>
         </aside>
         <main class="payment">
           <div class="logo-icon">
@@ -59,19 +61,15 @@
           <p class="notification">Thông báo: Áp dụng phí cho Tool EOP</p>
           <p>
             Chào bạn, Mình xin thông báo rằng bắt đầu từ ngày 22/2/2024, mình sẽ
-            áp dụng một khoản phí nhỏ cho việc sử dụng tool EOP. Điều này giúp
-            chúng hệ thống được duy trì và phát triển để cung cấp cho bạn trải
-            nghiệm tốt nhất có thể.
+            áp dụng một khoản phí nhỏ là <b>20.000đ/tháng</b> cho việc sử dụng
+            tool EOP. Điều này giúp chúng hệ thống được duy trì và phát triển để
+            cung cấp cho bạn trải nghiệm tốt nhất có thể.
           </p>
           <div class="qr-code">
-            <strong>Quét QR để thanh toán cho mã tài khoản:</strong> <span class="title-description"></span>
+            <strong>Quét QR để thanh toán cho mã tài khoản:</strong>
+            <span class="title-description"></span>
           </div>
-          <img
-            class="qr-code-img"
-            src=""
-            width="500px"
-            height="550px"
-          />
+          <img class="qr-code-img" src="" width="350px" height="350px" />
           <div class="payment-options">
             <p class="line-6">
               Nếu bạn gặp bất kỳ vấn đề hoặc câu hỏi nào, Liên hệ qua facebook
@@ -80,19 +78,7 @@
                 >Nguyen Truong</a
               >
             </p>
-            <p>
-              Rất trân trọng sự ủng hộ của bạn và mong muốn tiếp tục hỗ trợ bạn
-              trong tương lai.
-            </p>
           </div>
-          <!-- <div id="security-info">
-          Ví điện tử momo đạt Pcj DSS Chứng nhận Bảo mật quốc tế PCI DSS
-        </div> -->
-          <!-- <div id="contact-info">
-          Hỗ trợ khách hàng<br />
-          Hotline: 1900545441<br />
-          Email: hotro@momo.vn
-        </div> -->
           <div class="contact-info">
             <p class="title-body">Trân trọng,</p>
             <p>Đội ngũ Tool EOP</p>
@@ -103,18 +89,20 @@
     </div>
     <script>
       let params = new URLSearchParams(window.location.search);
-      let tooleopId = params.get('tooleop-id');
+      let tooleopId = params.get("tooleop-id");
 
       // Get the .title-body element
-      let titleBodyElement = document.getElementsByClassName('title-description');
+      let titleBodyElement =
+        document.getElementsByClassName("title-description");
 
       // Set the tooleopId as the text of the .title-body element
-      
+
       for (let i = 0; i < titleBodyElement.length; i++) {
         titleBodyElement[i].textContent = tooleopId;
       }
-      document.querySelector('.qr-code-img').src =
-      `https://img.vietqr.io/image/TPB-04288286101-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`
+      document.querySelector(
+        ".qr-code-img"
+      ).src = `https://img.vietqr.io/image/TPB-04288286101-compact-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`;
     </script>
   </body>
 </html>
