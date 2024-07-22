@@ -120,13 +120,16 @@
         button.disabled = true;
         button.textContent = "Đang kiểm tra...";
 
-        fetch("api/transaction/check-register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ user_code: tooleopId }),
-        })
+        fetch(
+          "https://tool-eop-v3-backend-wszmtm2dda-uc.a.run.app/transaction/check-register",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ user_code: tooleopId }),
+          }
+        )
           .then((response) => response.text())
           .then((data) => {
             if (data === "true") {
