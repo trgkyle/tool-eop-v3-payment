@@ -71,11 +71,20 @@
             <strong>Quét QR để thanh toán cho mã tài khoản:</strong>
             <span class="title-description"></span>
           </div>
+
           <img class="qr-code-img" src="" width="400px" height="450px" />
+          <button
+            id="checkPaymentButton"
+            onclick="checkPayment()"
+            class="check-payment-button"
+          >
+            Đã thanh toán, kiểm tra
+          </button>
           <div class="payment-options">
             <p class="line-6">
-              Sau khi chuyển khoản có thể sẽ mất vài phút hoặc lâu hơn để hệ thống cập nhật,
-              Nếu bạn gặp bất kỳ vấn đề hoặc câu hỏi nào, Liên hệ qua facebook
+              Sau khi chuyển khoản có thể sẽ mất vài phút hoặc lâu hơn để hệ
+              thống cập nhật, Nếu bạn gặp bất kỳ vấn đề hoặc câu hỏi nào, Liên
+              hệ qua facebook
               <ion-icon class="logo-facebook" name="logo-facebook"></ion-icon>
               <a class="facebook-link" href="https://www.facebook.com/trgkyle"
                 >Nguyen Truong</a
@@ -89,11 +98,11 @@
       </div>
     </div>
     <script>
-      let params = new URLSearchParams(window.location.search);
-      let tooleopId = params.get("tooleop-id");
+      const params = new URLSearchParams(window.location.search);
+      const tooleopId = params.get("tooleop-id");
 
       // Get the .title-body element
-      let titleBodyElement =
+      const titleBodyElement =
         document.getElementsByClassName("title-description");
 
       // Set the tooleopId as the text of the .title-body element
@@ -104,6 +113,36 @@
       document.querySelector(
         ".qr-code-img"
       ).src = `https://img.vietqr.io/image/TPB-04288286101-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`;
+
+      // Function to check payment status
+      function checkPayment() {
+        const button = document.getElementById("checkPaymentButton");
+        button.disabled = true;
+        button.textContent = "Đang kiểm tra...";
+
+        fetch("api/transaction/check-register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            body: JSON.stringify({ user_code: tooleopId }),
+          },
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            if (data === "true") {
+              button.textContent = "Thanh toán thành công!";
+              // Add any additional actions for successful payment
+            } else {
+              button.textContent = "Kiểm tra lại";
+              button.disabled = false;
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            button.textContent = "Lỗi, thử lại";
+            button.disabled = false;
+          });
+      }
     </script>
   </body>
 </html>

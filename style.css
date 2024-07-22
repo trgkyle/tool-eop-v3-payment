@@ -135,3 +135,21 @@ aside {
     display: none;
   }
 }
+
+.check-payment-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #df0000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-payment-button:hover {
+  background-color: #b00000;
+}
