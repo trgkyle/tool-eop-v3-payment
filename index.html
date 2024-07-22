@@ -124,8 +124,8 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            body: JSON.stringify({ user_code: tooleopId }),
           },
+          body: JSON.stringify({ user_code: tooleopId }),
         })
           .then((response) => response.text())
           .then((data) => {
