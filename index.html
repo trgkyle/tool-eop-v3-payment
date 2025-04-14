@@ -34,16 +34,16 @@
           <div class="bank">
             <img
               class="tp-logo"
-              src="Icon-TPBank.webp"
-              alt="Ngân hàng TPBank"
-              width="24px"
-              height="24px"
+              src="acb_logo.svg"
+              alt="Ngân hàng ACB"
+              width="50px"
+              height="50px"
             />
-            <p class="tp-bank">TP Bank</p>
+            <p class="tp-bank">ACB</p>
           </div>
           <hr color="#ADB5BD" size="1px" noshade="noshade" align="center" />
           <p class="title">Số tài khoản</p>
-          <p class="title-body">04288286101</p>
+          <p class="title-body">19889461</p>
           <hr color="#ADB5BD" size="1px" noshade="noshade" />
           <p class="title">Tên tài khoản</p>
           <p class="title-body">NGUYEN XUAN TRUONG</p>
@@ -63,36 +63,38 @@
           <hr />
           <p class="notification">Thông báo: Áp dụng phí cho Tool EOP</p>
           <p>
-            Chào bạn, Mình xin thông báo rằng bắt đầu từ ngày 22/2/2024, mình sẽ
+            Chào bạn, Mình xin thông báo rằng bắt đầu từ ngày 14/4/2025, mình sẽ
             áp dụng một khoản phí là <b>20.000đ/tháng</b> cho việc sử dụng tool
             EOP. Điều này giúp hệ thống được duy trì và phát triển.
           </p>
+          <div class="tool-info">
+            <p class="info-title">Thông tin quan trọng sau khi sử dụng Tool EOP bản trả phí:</p>
+            <ul class="info-list">
+              <li>Tool có tính năng tự động điền đáp án cho các câu hỏi (Unit test các bạn chỉ nên sử dụng để tham khảo)</li>
+              <li>Tool sẽ hoạt động với tài khoản EOP mà bạn đang đăng nhập hiện tại</li>
+              <li>Khi xóa và cài đặt lại tool, dữ liệu của bạn vẫn được giữ nguyên</li>
+              <li>Tool chỉ hỗ trợ làm bài tập và unit test, không hỗ trợ làm bài kiểm tra thường xuyên</li>
+            </ul>
+          </div>
           <div class="qr-code">
             <strong>Quét QR để thanh toán cho mã tài khoản:</strong>
             <span class="title-description"></span>
           </div>
 
           <img class="qr-code-img" src="" width="400px" height="450px" />
-          <button
-            id="checkPaymentButton"
-            onclick="checkPayment()"
-            class="check-payment-button"
-          >
-            Đã thanh toán, kiểm tra
-          </button>
           <div class="payment-options">
             <p class="line-6">
               Sau khi chuyển khoản có thể sẽ mất vài phút hoặc lâu hơn để hệ
-              thống cập nhật, Nếu bạn gặp bất kỳ vấn đề hoặc câu hỏi nào, Liên
-              hệ qua facebook
+              thống cập nhật, Nếu bạn gặp vấn đề chuyển khoản, hãy liên hệ
               <ion-icon class="logo-facebook" name="logo-facebook"></ion-icon>
-              <a class="facebook-link" href="https://www.facebook.com/trgkyle"
-                >Nguyen Truong</a
+              <a class="facebook-link" href="https://www.facebook.com/trinhanh203"
+                >Trinh Anh</a
               >
+              <a class="phone-link" href="tel:+84336606091">SĐT: 0336606091</a>
             </p>
           </div>
           <div class="contact-info">
-            <p class="copyright"><em>@Copyright Tool EOP 2024</em></p>
+            <p class="copyright"><em>@Copyright Tool EOP 2025</em></p>
           </div>
         </main>
       </div>
@@ -112,40 +114,7 @@
       }
       document.querySelector(
         ".qr-code-img"
-      ).src = `https://img.vietqr.io/image/TPB-04288286101-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`;
-
-      // Function to check payment status
-      function checkPayment() {
-        const button = document.getElementById("checkPaymentButton");
-        button.disabled = true;
-        button.textContent = "Đang kiểm tra...";
-
-        fetch(
-          "https://tool-eop-v3-backend-wszmtm2dda-uc.a.run.app/transaction/check-register",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ user_code: Number(tooleopId) }),
-          }
-        )
-          .then((response) => response.text())
-          .then((data) => {
-            if (data === "true") {
-              button.textContent = "Thanh toán thành công!";
-              // Add any additional actions for successful payment
-            } else {
-              button.textContent = "Kiểm tra lại";
-              button.disabled = false;
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            button.textContent = "Lỗi, thử lại";
-            button.disabled = false;
-          });
-      }
+      ).src = `https://img.vietqr.io/image/ACB-19889461-compact2.png?amount=20000&addInfo=tooleopid${tooleopId}&accountName=NGUYEN%20XUAN%20TRUONG`;
     </script>
   </body>
 </html>

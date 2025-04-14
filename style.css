@@ -121,6 +121,29 @@ aside {
   margin-bottom: 10px;
 }
 
+.tool-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #df0000;
+  border-radius: 4px;
+}
+
+.info-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #df0000;
+}
+
+.info-list {
+  padding-left: 20px;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
 /* For mobile devices */
 @media (max-width: 900px) {
   .container {
@@ -136,20 +159,6 @@ aside {
   }
 }
 
-.check-payment-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #df0000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.check-payment-button:hover {
-  background-color: #b00000;
+.phone-link {
+  color: #3b5998;
 }
